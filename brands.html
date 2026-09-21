@@ -1,1 +1,1258 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About Apyarix</title><link rel="stylesheet" href="assets/css/style.css"><script defer src="assets/js/site.js"></script></head><body><div id="site-header"></div><main><section class="page-hero"><span class="eyebrow">APYARIX</span><h1>One trusted honey brand.</h1><p>Apyarix is dedicated to natural bee products made for everyday wellness, simple living and better health.</p></section><section class="section brand-list"><article class="brand-large apyarix-hero"><div><span class="eyebrow">PURE HONEY • HEALTHY TOMORROW</span><h2>Apyarix</h2><p>Natural bee products with a focus on quality, purity and everyday wellness. From raw honey to crafted hive essentials, Apyarix brings consistent goodness from the hive to your home.</p><a class="btn btn-primary" href="products.html">Shop Apyarix</a></div><div class="brand-symbol"><img src="images/logo.png" alt="Apyarix logo"></div></article></section></main><div id="site-footer"></div></body></html>
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Our Story — Apyarix</title>
+
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<script defer src="assets/js/site.js"></script>
+
+<style>
+/* =========================================================
+   APYARIX — OUR STORY
+   Premium Honey / Natural Products Design
+   ========================================================= */
+
+:root{
+    --gold:#d89b22;
+    --gold-light:#f3c75b;
+    --gold-pale:#fff4d6;
+    --amber:#b97808;
+    --brown:#3a2413;
+    --brown-light:#6c4a2b;
+    --cream:#fffaf0;
+    --white:#ffffff;
+    --text:#24180e;
+    --muted:#746657;
+    --border:rgba(58,36,19,.10);
+    --shadow:0 20px 55px rgba(58,36,19,.10);
+    --shadow-soft:0 10px 30px rgba(58,36,19,.07);
+    --radius:24px;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    background:var(--cream);
+    color:var(--text);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+#site-header{
+    position:relative;
+    z-index:50;
+}
+
+/*
+   Your site.js can continue inserting the shared Apyarix
+   header here.
+*/
+
+#site-header img{
+    max-height:55px;
+    width:auto;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.page-hero{
+    position:relative;
+    min-height:590px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 24px 120px;
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 50% 30%,
+        rgba(255,211,104,.30),
+        transparent 32%),
+        linear-gradient(
+        135deg,
+        #fffaf0 0%,
+        #fff3cf 52%,
+        #f8df9b 100%
+        );
+}
+
+/* Decorative honeycomb background */
+
+.page-hero::before{
+    content:"";
+    position:absolute;
+    width:620px;
+    height:620px;
+    right:-180px;
+    top:-230px;
+    opacity:.16;
+
+    background-image:
+        linear-gradient(30deg,#c78919 12%,transparent 12.5%,transparent 87%,#c78919 87.5%,#c78919),
+        linear-gradient(150deg,#c78919 12%,transparent 12.5%,transparent 87%,#c78919 87.5%,#c78919),
+        linear-gradient(30deg,#c78919 12%,transparent 12.5%,transparent 87%,#c78919 87.5%,#c78919),
+        linear-gradient(150deg,#c78919 12%,transparent 12.5%,transparent 87%,#c78919 87.5%,#c78919),
+        linear-gradient(60deg,#c78919 25%,transparent 25.5%,transparent 75%,#c78919 75%);
+    background-size:80px 140px;
+    background-position:0 0,0 0,40px 70px,40px 70px,0 0;
+    transform:rotate(12deg);
+}
+
+.page-hero::after{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    left:-220px;
+    bottom:-250px;
+    border-radius:50%;
+    background:rgba(216,155,34,.16);
+    filter:blur(5px);
+}
+
+.page-hero > *{
+    position:relative;
+    z-index:2;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:8px 16px;
+    border:1px solid rgba(185,120,8,.25);
+    border-radius:999px;
+
+    background:rgba(255,255,255,.55);
+    backdrop-filter:blur(10px);
+
+    color:var(--amber);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.eyebrow::before{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--gold);
+    box-shadow:0 0 0 5px rgba(216,155,34,.12);
+}
+
+.page-hero h1{
+    max-width:850px;
+    margin:26px auto 20px;
+
+    font-size:clamp(44px,7vw,82px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    font-weight:900;
+    color:var(--brown);
+}
+
+.page-hero h1 span{
+    color:var(--gold);
+}
+
+.page-hero p{
+    max-width:680px;
+    margin:auto;
+
+    color:var(--muted);
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.section{
+    width:min(1180px,calc(100% - 40px));
+    margin:auto;
+    padding:100px 0;
+}
+
+.section-label{
+    margin-bottom:12px;
+
+    color:var(--amber);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-title{
+    margin-bottom:22px;
+
+    color:var(--brown);
+    font-size:clamp(34px,5vw,52px);
+    line-height:1.1;
+    letter-spacing:-1.5px;
+}
+
+.section-text{
+    color:var(--muted);
+    font-size:16px;
+    line-height:1.9;
+}
+
+/* =========================================================
+   STORY INTRO
+   ========================================================= */
+
+.story-intro{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:70px;
+    align-items:center;
+}
+
+.story-copy{
+    max-width:650px;
+}
+
+.story-copy p{
+    color:var(--muted);
+    margin-bottom:20px;
+    font-size:16px;
+    line-height:1.9;
+}
+
+/* Story visual */
+
+.story-visual{
+    min-height:470px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.story-card{
+    position:relative;
+    width:min(430px,100%);
+    min-height:420px;
+    padding:50px 40px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    border-radius:34px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #4a2d17,
+            #24150b
+        );
+
+    box-shadow:0 30px 70px rgba(36,21,11,.25);
+    overflow:hidden;
+}
+
+.story-card::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    right:-100px;
+    top:-100px;
+    border-radius:50%;
+    background:rgba(243,199,91,.14);
+}
+
+.story-card::after{
+    content:"";
+    position:absolute;
+    width:200px;
+    height:200px;
+    left:-90px;
+    bottom:-100px;
+    border-radius:50%;
+    background:rgba(216,155,34,.13);
+}
+
+.story-symbol{
+    position:relative;
+    z-index:2;
+
+    width:90px;
+    height:90px;
+    margin-bottom:35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:28px;
+
+    background:linear-gradient(
+        145deg,
+        var(--gold-light),
+        var(--gold)
+    );
+
+    color:var(--brown);
+    font-size:42px;
+
+    box-shadow:0 15px 35px rgba(216,155,34,.25);
+}
+
+.story-card blockquote{
+    position:relative;
+    z-index:2;
+
+    color:#fff;
+    font-size:32px;
+    line-height:1.25;
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+.story-card small{
+    position:relative;
+    z-index:2;
+
+    display:block;
+    margin-top:22px;
+
+    color:#e8d9c3;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+/* =========================================================
+   VALUES
+   ========================================================= */
+
+.values-section{
+    background:#fff;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
+.values-header{
+    max-width:680px;
+    margin-bottom:55px;
+}
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.value-card{
+    position:relative;
+    padding:35px;
+
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff,
+            #fffaf1
+        );
+
+    box-shadow:var(--shadow-soft);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.value-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow);
+    border-color:rgba(216,155,34,.35);
+}
+
+.value-number{
+    position:absolute;
+    top:25px;
+    right:25px;
+
+    color:rgba(185,120,8,.18);
+    font-size:38px;
+    font-weight:900;
+}
+
+.value-icon{
+    width:58px;
+    height:58px;
+    margin-bottom:25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:var(--gold-pale);
+    color:var(--amber);
+
+    font-size:25px;
+}
+
+.value-card h3{
+    margin-bottom:12px;
+    color:var(--brown);
+    font-size:21px;
+}
+
+.value-card p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   JOURNEY
+   ========================================================= */
+
+.journey{
+    background:var(--cream);
+}
+
+.journey-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:55px;
+}
+
+.journey-item{
+    position:relative;
+    padding:30px 28px;
+
+    border-radius:22px;
+
+    background:#fff;
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-soft);
+}
+
+.journey-year{
+    display:inline-block;
+    margin-bottom:18px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+    background:var(--gold-pale);
+
+    color:var(--amber);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.journey-item h3{
+    margin-bottom:10px;
+    color:var(--brown);
+}
+
+.journey-item p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* =========================================================
+   NATURAL PROMISE
+   ========================================================= */
+
+.promise{
+    position:relative;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2b1a0e,
+            #4a2d17
+        );
+}
+
+.promise-inner{
+    width:min(1180px,calc(100% - 40px));
+    margin:auto;
+    padding:90px 0;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.promise-copy{
+    color:white;
+}
+
+.promise-copy .section-label{
+    color:var(--gold-light);
+}
+
+.promise-copy h2{
+    margin-bottom:22px;
+
+    color:#fff;
+    font-size:clamp(35px,5vw,56px);
+    line-height:1.1;
+    letter-spacing:-1.5px;
+}
+
+.promise-copy p{
+    color:#e8d9c3;
+    line-height:1.9;
+}
+
+.promise-points{
+    display:grid;
+    gap:15px;
+}
+
+.promise-point{
+    display:flex;
+    gap:15px;
+    align-items:flex-start;
+
+    padding:20px;
+
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:18px;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(8px);
+}
+
+.promise-check{
+    flex:0 0 35px;
+    width:35px;
+    height:35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--gold);
+    color:var(--brown);
+    font-weight:900;
+}
+
+.promise-point h3{
+    margin-bottom:3px;
+    color:white;
+    font-size:16px;
+}
+
+.promise-point p{
+    color:#cbbda9;
+    font-size:13px;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.story-cta{
+    width:min(1180px,calc(100% - 40px));
+    margin:100px auto;
+
+    padding:70px 60px;
+
+    position:relative;
+    overflow:hidden;
+
+    border-radius:32px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255,210,100,.32),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f5ca61,
+            #d99a20
+        );
+
+    box-shadow:var(--shadow);
+}
+
+.story-cta::before{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    right:-100px;
+    bottom:-140px;
+
+    border-radius:50%;
+    border:35px solid rgba(255,255,255,.13);
+}
+
+.story-cta-content{
+    position:relative;
+    z-index:2;
+    max-width:700px;
+}
+
+.story-cta h2{
+    margin-bottom:15px;
+
+    color:var(--brown);
+    font-size:clamp(32px,5vw,48px);
+    line-height:1.1;
+}
+
+.story-cta p{
+    margin-bottom:28px;
+    color:#5b3a16;
+}
+
+.cta-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:50px;
+    padding:0 23px;
+
+    border-radius:14px;
+
+    font-size:14px;
+    font-weight:800;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-dark{
+    background:var(--brown);
+    color:white;
+    box-shadow:0 10px 25px rgba(58,36,19,.18);
+}
+
+.btn-light{
+    background:rgba(255,255,255,.55);
+    color:var(--brown);
+    border:1px solid rgba(58,36,19,.12);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+#site-footer{
+    margin-top:0;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:950px){
+
+    .story-intro{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .story-copy{
+        max-width:none;
+    }
+
+    .story-visual{
+        min-height:auto;
+    }
+
+    .values-grid,
+    .journey-grid{
+        grid-template-columns:1fr;
+    }
+
+    .promise-inner{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+}
+
+@media(max-width:650px){
+
+    .page-hero{
+        min-height:500px;
+        padding:80px 20px 90px;
+    }
+
+    .page-hero h1{
+        font-size:44px;
+        letter-spacing:-2px;
+    }
+
+    .page-hero p{
+        font-size:16px;
+    }
+
+    .section{
+        width:min(100% - 30px,1180px);
+        padding:70px 0;
+    }
+
+    .story-card{
+        min-height:360px;
+        padding:35px;
+    }
+
+    .story-card blockquote{
+        font-size:27px;
+    }
+
+    .story-symbol{
+        width:75px;
+        height:75px;
+        font-size:34px;
+    }
+
+    .value-card{
+        padding:28px;
+    }
+
+    .journey-item{
+        padding:25px;
+    }
+
+    .promise-inner{
+        width:min(100% - 30px,1180px);
+        padding:70px 0;
+    }
+
+    .story-cta{
+        width:calc(100% - 30px);
+        margin:70px auto;
+        padding:45px 28px;
+        border-radius:25px;
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        transition:none !important;
+        animation:none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =======================================================
+     SHARED HEADER
+     site.js can inject your normal Apyarix header here.
+     ======================================================= -->
+
+<div id="site-header"></div>
+
+<main>
+
+<!-- =======================================================
+     HERO
+     ======================================================= -->
+
+<section class="page-hero">
+
+    <div class="hero-content">
+
+        <span class="eyebrow">
+            ABOUT APYARIX
+        </span>
+
+        <h1>
+            From the hive,
+            <span>with purpose.</span>
+        </h1>
+
+        <p>
+            Apyarix brings natural bee products closer to everyday life,
+            combining the goodness of the hive with careful attention to
+            quality, simplicity and trust.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     OUR STORY
+     ======================================================= -->
+
+<section class="section">
+
+    <div class="story-intro">
+
+        <div class="story-copy">
+
+            <div class="section-label">
+                Our Story
+            </div>
+
+            <h2 class="section-title">
+                A simple idea inspired by nature.
+            </h2>
+
+            <p>
+                We believe bee products should be simple to understand,
+                easy to trust and enjoyable to use. Apyarix was created
+                around this idea — bringing carefully selected honey and
+                hive-based products into one clear, customer-friendly
+                collection.
+            </p>
+
+            <p>
+                From natural honey to beeswax and other hive products,
+                we focus on thoughtful sourcing, careful handling and
+                products that fit naturally into everyday life.
+            </p>
+
+            <p>
+                Our journey is inspired by the remarkable relationship
+                between bees, nature and people. Every product represents
+                a connection between the hive and the home.
+            </p>
+
+        </div>
+
+
+        <div class="story-visual">
+
+            <div class="story-card">
+
+                <div class="story-symbol">
+                    ⬡
+                </div>
+
+                <blockquote>
+                    “From the hive to your home.”
+                </blockquote>
+
+                <small>
+                    THE APYARIX PROMISE
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     VALUES
+     ======================================================= -->
+
+<section class="values-section">
+
+    <div class="section">
+
+        <div class="values-header">
+
+            <div class="section-label">
+                What Guides Us
+            </div>
+
+            <h2 class="section-title">
+                The principles behind Apyarix.
+            </h2>
+
+            <p class="section-text">
+                Everything we do starts with respect for nature,
+                attention to quality and a commitment to making our
+                products straightforward for our customers.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+            <article class="value-card">
+
+                <span class="value-number">01</span>
+
+                <div class="value-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Purity
+                </h3>
+
+                <p>
+                    We value natural products and thoughtful handling,
+                    keeping the character of hive products at the heart
+                    of what we offer.
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <span class="value-number">02</span>
+
+                <div class="value-icon">
+                    ◈
+                </div>
+
+                <h3>
+                    Quality
+                </h3>
+
+                <p>
+                    We pay attention to sourcing, presentation and
+                    product care so customers can shop with confidence.
+                </p>
+
+            </article>
+
+
+            <article class="value-card">
+
+                <span class="value-number">03</span>
+
+                <div class="value-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Trust
+                </h3>
+
+                <p>
+                    We want every interaction with Apyarix to feel clear,
+                    honest and dependable — from discovering a product
+                    to bringing it home.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     OUR JOURNEY
+     ======================================================= -->
+
+<section class="section journey">
+
+    <div class="section-label">
+        Our Approach
+    </div>
+
+    <h2 class="section-title">
+        Nature. Care. Connection.
+    </h2>
+
+    <p class="section-text">
+        Our approach follows a simple path: respect where the product
+        comes from, care for what reaches the customer and build lasting
+        relationships along the way.
+    </p>
+
+
+    <div class="journey-grid">
+
+        <article class="journey-item">
+
+            <span class="journey-year">
+                01 · NATURE
+            </span>
+
+            <h3>
+                Inspired by the hive
+            </h3>
+
+            <p>
+                Bees and their natural environment are at the centre of
+                everything we represent.
+            </p>
+
+        </article>
+
+
+        <article class="journey-item">
+
+            <span class="journey-year">
+                02 · CARE
+            </span>
+
+            <h3>
+                Thoughtful selection
+            </h3>
+
+            <p>
+                We focus on products that fit our expectations for
+                quality, usefulness and natural character.
+            </p>
+
+        </article>
+
+
+        <article class="journey-item">
+
+            <span class="journey-year">
+                03 · HOME
+            </span>
+
+            <h3>
+                Made for everyday life
+            </h3>
+
+            <p>
+                Our goal is to make natural bee products easy to discover,
+                understand and enjoy.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     QUALITY PROMISE
+     ======================================================= -->
+
+<section class="promise">
+
+    <div class="promise-inner">
+
+        <div class="promise-copy">
+
+            <div class="section-label">
+                The Apyarix Difference
+            </div>
+
+            <h2>
+                Good products start with good care.
+            </h2>
+
+            <p>
+                We believe the experience should go beyond the product
+                itself. From presentation to customer service, every
+                part of Apyarix is designed around clarity and care.
+            </p>
+
+        </div>
+
+
+        <div class="promise-points">
+
+            <div class="promise-point">
+
+                <div class="promise-check">
+                    ✓
+                </div>
+
+                <div>
+                    <h3>
+                        Natural inspiration
+                    </h3>
+
+                    <p>
+                        Products connected to the remarkable world of bees.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="promise-point">
+
+                <div class="promise-check">
+                    ✓
+                </div>
+
+                <div>
+                    <h3>
+                        Customer focused
+                    </h3>
+
+                    <p>
+                        Clear information and a straightforward buying
+                        experience.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="promise-point">
+
+                <div class="promise-check">
+                    ✓
+                </div>
+
+                <div>
+                    <h3>
+                        Built for trust
+                    </h3>
+
+                    <p>
+                        We aim to create relationships that go beyond a
+                        single purchase.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     CTA
+     ======================================================= -->
+
+<section class="story-cta">
+
+    <div class="story-cta-content">
+
+        <h2>
+            Discover the world of Apyarix.
+        </h2>
+
+        <p>
+            Explore our natural bee products and find something special
+            for your home, family or everyday routine.
+        </p>
+
+        <div class="cta-buttons">
+
+            <a
+                href="products.html"
+                class="btn btn-dark"
+            >
+                Explore Products
+            </a>
+
+            <a
+                href="brands.html"
+                class="btn btn-light"
+            >
+                Meet Our Brands
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =======================================================
+     SHARED FOOTER
+     ======================================================= -->
+
+<div id="site-footer"></div>
+
+</body>
+</html>
+```
