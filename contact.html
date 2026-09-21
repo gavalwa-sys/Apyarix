@@ -1,1 +1,1391 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact — Apyarix</title><link rel="stylesheet" href="assets/css/style.css"><script defer src="assets/js/site.js"></script></head><body><div id="site-header"></div><main><section class="page-hero"><span class="eyebrow">GET IN TOUCH</span><h1>Let’s talk bee products.</h1><p>Ask about Apyarix honey, availability and bulk orders.</p></section><section class="section contact-grid"><div><h2>Send an enquiry</h2><p id="form-notice" class="success" aria-live="polite"></p><form id="contact-form"><label>Name<input name="name" required></label><label>Phone / WhatsApp<input name="phone"></label><label>Message<textarea name="message" rows="6" required></textarea></label><button class="btn btn-gold" type="submit">Send enquiry</button></form></div><div class="contact-card"><h3>Order directly</h3><p>For faster ordering, connect with Apyarix on WhatsApp.</p><a class="btn btn-dark" target="_blank" rel="noopener" href="https://wa.me/254180737032?text=Hello%20Apyarix%2C%20I%20would%20like%20to%20enquire%20about%20your%20bee%20products.">WhatsApp Apyarix</a><hr><p><b>Brand</b><br>Apyarix</p></div></section></main><div id="site-footer"></div></body></html>
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Contact Apyarix — Bee Products</title>
+
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<style>
+/* =========================================================
+   APYARIX CONTACT PAGE
+   Premium standalone design
+========================================================= */
+
+:root{
+    --gold:#d9a441;
+    --gold-light:#f3cf73;
+    --dark:#111111;
+    --dark-2:#1b1b1b;
+    --cream:#faf7ef;
+    --white:#ffffff;
+    --text:#333333;
+    --muted:#777777;
+    --border:#e8e1d3;
+    --shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--text);
+    background:var(--white);
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea{
+    font:inherit;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(0,0,0,.07);
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    min-height:82px;
+    padding:0 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+}
+
+.brand img{
+    width:145px;
+    height:auto;
+    display:block;
+}
+
+.main-nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.main-nav a{
+    position:relative;
+    font-size:14px;
+    font-weight:700;
+    color:#333;
+    transition:.25s;
+}
+
+.main-nav a:hover,
+.main-nav a.active{
+    color:#b78318;
+}
+
+.main-nav a.active:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-10px;
+    height:2px;
+    background:var(--gold);
+}
+
+.header-btn{
+    padding:12px 20px;
+    border-radius:30px;
+    background:var(--dark);
+    color:#fff !important;
+    font-size:13px !important;
+}
+
+.header-btn:hover{
+    background:var(--gold);
+    color:#111 !important;
+}
+
+.menu-toggle{
+    display:none;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 85% 25%,rgba(217,164,65,.20),transparent 25%),
+        linear-gradient(135deg,#151515,#252525);
+    color:#fff;
+}
+
+.hero-inner{
+    max-width:1200px;
+    margin:auto;
+    min-height:500px;
+    padding:90px 28px;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    align-items:center;
+    gap:70px;
+}
+
+.eyebrow{
+    display:inline-block;
+    margin-bottom:18px;
+    color:var(--gold-light);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    max-width:720px;
+    font-size:clamp(42px,6vw,72px);
+    line-height:1.02;
+    letter-spacing:-2px;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:620px;
+    color:#d6d6d6;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-top:32px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:50px;
+    padding:0 24px;
+    border-radius:8px;
+    font-weight:800;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#111;
+}
+
+.btn-gold:hover{
+    background:var(--gold-light);
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border-color:rgba(255,255,255,.3);
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#111;
+}
+
+/* Honeycomb visual */
+
+.hero-visual{
+    min-height:320px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.honeycomb{
+    width:280px;
+    height:280px;
+    position:relative;
+    transform:rotate(30deg);
+}
+
+.hex{
+    position:absolute;
+    width:105px;
+    height:120px;
+    background:rgba(217,164,65,.14);
+    border:1px solid rgba(243,207,115,.45);
+    clip-path:polygon(
+        25% 6.7%,
+        75% 6.7%,
+        100% 50%,
+        75% 93.3%,
+        25% 93.3%,
+        0 50%
+    );
+}
+
+.hex:nth-child(1){top:0;left:85px;}
+.hex:nth-child(2){top:78px;left:25px;}
+.hex:nth-child(3){top:78px;left:145px;}
+.hex:nth-child(4){top:156px;left:85px;}
+
+.hex span{
+    display:block;
+    width:100%;
+    height:100%;
+    background:rgba(217,164,65,.08);
+}
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.section{
+    padding:90px 28px;
+}
+
+.contact-wrap{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-heading{
+    max-width:700px;
+    margin-bottom:45px;
+}
+
+.section-heading .eyebrow{
+    color:#b78318;
+}
+
+.section-heading h2{
+    font-size:clamp(32px,4vw,48px);
+    line-height:1.1;
+    color:#171717;
+    margin-bottom:15px;
+}
+
+.section-heading p{
+    color:var(--muted);
+}
+
+/* Main grid */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:35px;
+    align-items:stretch;
+}
+
+/* Form */
+
+.form-card{
+    padding:42px;
+    border:1px solid var(--border);
+    border-radius:18px;
+    background:#fff;
+    box-shadow:var(--shadow);
+}
+
+.form-card h3{
+    font-size:25px;
+    color:#171717;
+    margin-bottom:8px;
+}
+
+.form-card .intro{
+    color:var(--muted);
+    margin-bottom:28px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-size:13px;
+    font-weight:800;
+    color:#333;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    border:1px solid #ddd6c8;
+    background:#fcfbf8;
+    border-radius:9px;
+    padding:14px 16px;
+    outline:none;
+    transition:.2s;
+}
+
+.form-group input{
+    height:52px;
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:145px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:var(--gold);
+    box-shadow:0 0 0 3px rgba(217,164,65,.12);
+    background:#fff;
+}
+
+.form-submit{
+    width:100%;
+    border:0;
+    min-height:54px;
+    font-size:15px;
+}
+
+/* =========================================================
+   DIRECT CONTACT CARD
+========================================================= */
+
+.direct-card{
+    position:relative;
+    overflow:hidden;
+    padding:42px;
+    border-radius:18px;
+    background:var(--dark);
+    color:#fff;
+    box-shadow:var(--shadow);
+}
+
+.direct-card:before{
+    content:"";
+    position:absolute;
+    width:230px;
+    height:230px;
+    border:1px solid rgba(217,164,65,.25);
+    border-radius:50%;
+    right:-90px;
+    top:-80px;
+}
+
+.direct-card:after{
+    content:"";
+    position:absolute;
+    width:140px;
+    height:140px;
+    border:1px solid rgba(217,164,65,.18);
+    border-radius:50%;
+    right:-30px;
+    top:-35px;
+}
+
+.direct-card h3{
+    position:relative;
+    z-index:2;
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.direct-card > p{
+    position:relative;
+    z-index:2;
+    color:#cfcfcf;
+    margin-bottom:30px;
+}
+
+.whatsapp-btn{
+    position:relative;
+    z-index:2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height:56px;
+    border-radius:9px;
+    background:#fff;
+    color:#111;
+    font-weight:800;
+    transition:.25s;
+}
+
+.whatsapp-btn:hover{
+    background:var(--gold);
+    transform:translateY(-2px);
+}
+
+.contact-details{
+    position:relative;
+    z-index:2;
+    margin-top:35px;
+    padding-top:28px;
+    border-top:1px solid rgba(255,255,255,.12);
+}
+
+.detail{
+    margin-bottom:20px;
+}
+
+.detail small{
+    display:block;
+    color:var(--gold-light);
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-size:10px;
+    font-weight:800;
+    margin-bottom:3px;
+}
+
+.detail strong{
+    color:#fff;
+    font-size:16px;
+}
+
+/* =========================================================
+   QUICK HELP STRIP
+========================================================= */
+
+.help-section{
+    background:var(--cream);
+}
+
+.help-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.help-card{
+    background:#fff;
+    padding:30px;
+    border:1px solid var(--border);
+    border-radius:14px;
+}
+
+.help-number{
+    display:inline-flex;
+    width:38px;
+    height:38px;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#f6e8c5;
+    color:#9b6d10;
+    font-weight:900;
+    margin-bottom:18px;
+}
+
+.help-card h3{
+    color:#181818;
+    margin-bottom:8px;
+}
+
+.help-card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+    padding:95px 28px;
+    background:#fff;
+    text-align:center;
+}
+
+.cta-inner{
+    max-width:800px;
+    margin:auto;
+}
+
+.cta .eyebrow{
+    color:#b78318;
+}
+
+.cta h2{
+    font-size:clamp(34px,5vw,54px);
+    line-height:1.1;
+    color:#151515;
+    margin-bottom:18px;
+}
+
+.cta p{
+    color:var(--muted);
+    margin-bottom:30px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer{
+    background:#101010;
+    color:#fff;
+    padding:65px 28px 25px;
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:45px;
+    padding-bottom:50px;
+}
+
+.footer-brand h3{
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.footer-brand p{
+    color:#aaa;
+    max-width:330px;
+    font-size:14px;
+}
+
+.footer-column h4{
+    color:var(--gold-light);
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    margin-bottom:17px;
+}
+
+.footer-column a{
+    display:block;
+    color:#aaa;
+    font-size:14px;
+    margin-bottom:9px;
+    transition:.2s;
+}
+
+.footer-column a:hover{
+    color:#fff;
+}
+
+.socials{
+    display:flex;
+    gap:8px;
+    margin-top:18px;
+}
+
+.socials a{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #333;
+    border-radius:50%;
+    color:#ccc;
+    margin:0;
+}
+
+.socials a:hover{
+    background:var(--gold);
+    border-color:var(--gold);
+    color:#111;
+}
+
+.footer-bottom{
+    padding-top:22px;
+    border-top:1px solid #292929;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    color:#777;
+    font-size:12px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    .main-nav{
+        display:none;
+        position:absolute;
+        top:82px;
+        left:0;
+        right:0;
+        padding:25px 28px 30px;
+        background:#fff;
+        border-bottom:1px solid #ddd;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+    }
+
+    .main-nav.open{
+        display:flex;
+    }
+
+    .main-nav a.active:after{
+        display:none;
+    }
+
+    .header-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+        padding-top:70px;
+        padding-bottom:70px;
+        gap:30px;
+    }
+
+    .hero-visual{
+        min-height:230px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .help-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .header-inner{
+        min-height:72px;
+        padding:0 20px;
+    }
+
+    .brand img{
+        width:120px;
+    }
+
+    .main-nav{
+        top:72px;
+    }
+
+    .hero-inner{
+        padding:60px 20px;
+    }
+
+    .hero h1{
+        letter-spacing:-1px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:65px 20px;
+    }
+
+    .form-card,
+    .direct-card{
+        padding:28px 22px;
+    }
+
+    .cta{
+        padding:70px 20px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+            <img src="images/logo.png" alt="Apyarix">
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+
+            <a href="index.html">Home</a>
+
+            <a href="products.html">Products</a>
+
+            <a href="brands.html">Brands</a>
+
+            <a href="our-story.html">Our Story</a>
+
+            <a href="contact.html" class="active">Contact</a>
+
+            <a href="products.html" class="header-btn">
+                Shop Products
+            </a>
+
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div>
+
+            <span class="eyebrow">
+                GET IN TOUCH
+            </span>
+
+            <h1>
+                Let’s talk about what comes from the hive.
+            </h1>
+
+            <p>
+                Whether you want to order Apyarix products, ask about
+                availability, discuss bulk orders or simply learn more,
+                we’re here to help.
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="https://wa.me/254180737032?text=Hello%20Apyarix%2C%20I%20would%20like%20to%20enquire%20about%20your%20bee%20products."
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-gold"
+                >
+                    Chat on WhatsApp
+                </a>
+
+                <a href="#enquiry" class="btn btn-outline">
+                    Send an Enquiry
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="honeycomb">
+
+                <div class="hex"><span></span></div>
+                <div class="hex"><span></span></div>
+                <div class="hex"><span></span></div>
+                <div class="hex"><span></span></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="section" id="enquiry">
+
+    <div class="contact-wrap">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                START A CONVERSATION
+            </span>
+
+            <h2>
+                Tell us what you need.
+            </h2>
+
+            <p>
+                Send your enquiry and give us a few details.
+                For the fastest response, you can also contact us
+                directly through WhatsApp.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+            <!-- FORM -->
+
+            <div class="form-card">
+
+                <h3>
+                    Send an enquiry
+                </h3>
+
+                <p class="intro">
+                    We’ll use your details to understand your request
+                    and get back to you.
+                </p>
+
+                <p
+                    id="form-notice"
+                    aria-live="polite"
+                    style="color:#9b6d10;margin-bottom:15px;"
+                ></p>
+
+                <form id="contact-form">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Your name
+                        </label>
+
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone / WhatsApp
+                        </label>
+
+                        <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            placeholder="Enter your phone number"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            How can we help?
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Tell us what you would like to order or ask about..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        class="btn btn-gold form-submit"
+                        type="submit"
+                    >
+                        Send Enquiry
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- DIRECT CONTACT -->
+
+            <aside class="direct-card">
+
+                <h3>
+                    Need a faster answer?
+                </h3>
+
+                <p>
+                    For product enquiries and direct orders,
+                    WhatsApp is the quickest way to reach Apyarix.
+                </p>
+
+                <a
+                    class="whatsapp-btn"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://wa.me/254180737032?text=Hello%20Apyarix%2C%20I%20would%20like%20to%20enquire%20about%20your%20bee%20products."
+                >
+                    WhatsApp Apyarix
+                </a>
+
+
+                <div class="contact-details">
+
+                    <div class="detail">
+
+                        <small>
+                            Brand
+                        </small>
+
+                        <strong>
+                            Apyarix
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <small>
+                            Enquiries
+                        </small>
+
+                        <strong>
+                            Product & Bulk Orders
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail">
+
+                        <small>
+                            Best way to reach us
+                        </small>
+
+                        <strong>
+                            WhatsApp
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW WE CAN HELP
+===================================================== -->
+
+<section class="section help-section">
+
+    <div class="contact-wrap">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                WHAT CAN WE HELP WITH?
+            </span>
+
+            <h2>
+                One message can get things moving.
+            </h2>
+
+        </div>
+
+
+        <div class="help-grid">
+
+            <div class="help-card">
+
+                <span class="help-number">01</span>
+
+                <h3>
+                    Product Enquiries
+                </h3>
+
+                <p>
+                    Ask about our honey and other bee-based
+                    products, availability and product details.
+                </p>
+
+            </div>
+
+
+            <div class="help-card">
+
+                <span class="help-number">02</span>
+
+                <h3>
+                    Direct Orders
+                </h3>
+
+                <p>
+                    Tell us what you need and connect with us
+                    directly to discuss your order.
+                </p>
+
+            </div>
+
+
+            <div class="help-card">
+
+                <span class="help-number">03</span>
+
+                <h3>
+                    Bulk Orders
+                </h3>
+
+                <p>
+                    Contact us if you are interested in larger
+                    quantities or business-related enquiries.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+    <div class="cta-inner">
+
+        <span class="eyebrow">
+            READY WHEN YOU ARE
+        </span>
+
+        <h2>
+            Discover what Apyarix brings from the hive.
+        </h2>
+
+        <p>
+            Explore our products or start a conversation with us today.
+        </p>
+
+        <a
+            href="products.html"
+            class="btn btn-gold"
+        >
+            Explore Products
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <h3>
+                    Apyarix
+                </h3>
+
+                <p>
+                    Natural bee products brought to homes,
+                    families and businesses with a focus on
+                    quality, care and trust.
+                </p>
+
+                <div class="socials">
+
+                    <a href="#" aria-label="Facebook">
+                        f
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        ig
+                    </a>
+
+                    <a
+                        href="https://wa.me/254180737032"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="WhatsApp"
+                    >
+                        wa
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Explore
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="brands.html">
+                    Brands
+                </a>
+
+                <a href="our-story.html">
+                    Our Story
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Information
+                </h4>
+
+                <a href="products.html">
+                    Our Products
+                </a>
+
+                <a href="our-story.html">
+                    About Apyarix
+                </a>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Connect
+                </h4>
+
+                <a
+                    href="https://wa.me/254180737032"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    WhatsApp
+                </a>
+
+                <a href="contact.html">
+                    Send Enquiry
+                </a>
+
+                <a href="products.html">
+                    Shop Products
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Apyarix. All rights reserved.
+            </span>
+
+            <span>
+                From the hive, with purpose.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     PAGE JAVASCRIPT
+===================================================== -->
+
+<script>
+
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", function(){
+
+    mainNav.classList.toggle("open");
+
+});
+
+
+/* Close mobile menu after selecting a page */
+
+document.querySelectorAll(".main-nav a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        mainNav.classList.remove("open");
+
+    });
+
+});
+
+
+/* Contact form */
+
+const contactForm = document.getElementById("contact-form");
+const formNotice = document.getElementById("form-notice");
+
+contactForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    if(!name || !message){
+
+        formNotice.textContent =
+            "Please enter your name and message.";
+
+        return;
+
+    }
+
+
+    /*
+       WhatsApp enquiry
+
+       This allows the form to work even on
+       a static website without PHP.
+    */
+
+    const whatsappMessage =
+        "Hello Apyarix,%0A%0A" +
+        "Name: " + encodeURIComponent(name) +
+        "%0APhone: " + encodeURIComponent(phone) +
+        "%0A%0AEnquiry:%0A" +
+        encodeURIComponent(message);
+
+
+    const whatsappURL =
+        "https://wa.me/254180737032?text=" +
+        whatsappMessage;
+
+
+    formNotice.textContent =
+        "Opening WhatsApp with your enquiry...";
+
+
+    window.open(
+        whatsappURL,
+        "_blank",
+        "noopener"
+    );
+
+});
+
+</script>
+
+</body>
+</html>
+```
